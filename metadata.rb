@@ -1,6 +1,6 @@
 name 'oracle-interview'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Olusegun Bolofinde'
+maintainer_email 'bolofbaba@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures oracle-interview'
 version '0.1.0'
