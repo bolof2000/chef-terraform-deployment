@@ -1,24 +1,20 @@
 # oracle-interview
 
 ## Installation
-
-This chef codes deploys a simple python flask application to multiple ec2 instances that is loadbalanced using 
-Auto scaling groups
+This chef codes deploys a simple python flask application to multiple ec2 instances managed by auto scaling groups
 ## Usage
+Follow the following steps to deploy the infrastructure provisioning and configuration management
+1. Setup chef server and workstations 
+2. Deploy the infrastructure codes for chef nodes using the infrastructure-deployment code 
+    terraform init 
+    terraform plan 
+    terraform apply
+   This will provision 3 ec2 instances that can be autoscaled by updating the default values defined in the variables file 
+   
+3. Ones the infrastructure is deployed, chef code is then executed to the managed nodes and nginx and Flask web server 
+will be installed and configured
+   
+4.The load balancer url should display host informations as defined in the python code 
 
-## Development
+5. A inspec tests is included to test that nginx is deployed on the managed nodes 
 
- the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/untitled5. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/untitled5/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Untitled5 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/untitled5/blob/master/CODE_OF_CONDUCT.md).
-# chef-terraform-deployment

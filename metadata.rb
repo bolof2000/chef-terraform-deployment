@@ -16,4 +16,4 @@ chef_version '>= 16.0'
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
 #
-# source_url 'https://github.com/<insert_org_here>/oracle-interview'
+# source_url 'https://github.com/bolof2000/chef-terraform-deployment'
